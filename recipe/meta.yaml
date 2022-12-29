@@ -1,5 +1,5 @@
 {% set name = "funsor" %}
-{% set version = "0.4.3" %}
+{% set version = "0.4.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d6b58ab42c64de96917664424e107e9f0e8414121f1ab1d76dbe87d23ce9c68e
+  sha256: 87c339ae517a993a853494fea8c977f6d3c963b9b08250c1eff421a5fae4fefc
 
 build:
   noarch: python
@@ -36,7 +36,7 @@ test:
 
 about:
   home: https://github.com/pyro-ppl/funsor
-  summary: 'Funsor is a tensor-like library for functions and distributions.'
+  summary: Funsor is a tensor-like library for functions and distributions.
   description: |
     Funsor is a tensor-like library for functions and distributions.
     See [Functional tensors for probabilistic programming](https://arxiv.org/abs/1910.10775) for a system description.
