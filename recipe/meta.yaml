@@ -6,20 +6,20 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 08b77e5de04d7cf5213b4013a08a2e756ab52572a48bef6774a0c70664d4fe31
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - makefun
     - multipledispatch
     - numpy >=1.7
@@ -31,6 +31,7 @@ test:
     - funsor
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
