@@ -1,5 +1,5 @@
 {% set name = "funsor" %}
-{% set version = "0.4.7" %}
+{% set version = "0.4.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a9528f1b399a5c72e9e52169f6a607cc52163751701726422ed9c7f83d404cb5
+  sha256: 088b19683d0c706fcd049b08a22233ebacaf27420b8a37c5d498119e15d4e94a
 
 build:
   noarch: python
